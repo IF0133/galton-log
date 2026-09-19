@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F7F7F4">
+  <meta name="description" content="Galton Logの使い方と、記録の保存・バックアップについて。">
+  <link rel="icon" href="favicon.png">
+  <title>使い方・データの保存 | Galton Log</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #243C37; background: #F7F7F4; font-family: system-ui, -apple-system, sans-serif; line-height: 1.85; }
+    main { max-width: 720px; margin: auto; padding: 32px 20px 48px; }
+    header img { border-radius: 16px; vertical-align: middle; margin-right: 12px; }
+    .brand { font-size: 20px; font-weight: 700; }
+    h1 { font-size: clamp(24px, 5vw, 32px); line-height: 1.5; margin: 24px 0 12px; }
+    h2 { font-size: 20px; margin: 0 0 12px; }
+    h3 { font-size: 17px; margin: 24px 0 6px; }
+    p { margin: 8px 0 16px; }
+    section { padding: 24px 0; border-top: 1px solid #D8DEDA; }
+    a { color: #08685E; text-underline-offset: 4px; overflow-wrap: anywhere; }
+    .open { display: inline-block; background: #0F766E; color: white; text-decoration: none; padding: 12px 20px; border-radius: 8px; margin: 8px 0 24px; }
+    nav { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-bottom: 24px; }
+    nav a { padding: 8px 0; }
+    li { margin: 8px 0; }
+    footer { font-size: 13px; color: #52665F; border-top: 1px solid #D8DEDA; padding-top: 20px; }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="brand"><img src="icons/Icon-192.png" width="56" height="56" alt="">Galton Log</div>
+    <h1>日々の小さな行動を、<br>玉にして残す。</h1>
+    <p>勉強、運動、読書。自分にとっての「できた」を、ひとつずつ。<br>小さな積み重ねが、自分への自信になります。</p>
+    <a class="open" href="./">アプリを開く</a>
+    <nav aria-label="案内の目次"><a href="#usage">使い方</a><a href="#data">保存とバックアップ</a><a href="#privacy">プライバシー</a></nav>
+  </header>
+  <section id="usage">
+    <h2>使い方</h2>
+    <h3>Board · 行動を記録する</h3>
+    <p>タグを選んでDROPを押すと1回分を記録し、玉がひとつ落ちます。タグを選ぶだけでは記録は増えません。間違えた直後は「取り消す」で戻せます。</p>
+    <h3>History · 積み重ねを振り返る</h3>
+    <p>月ごとの回数とタグ別の内訳を確認できます。Replay Boardは記録した玉をもう一度再生する機能で、記録数は増えません。</p>
+    <p>DailyはListとCalendarを切り替えられます。CalendarのAllでは、いずれかの記録がある日を塗ります。タグを選ぶと、そのタグの記録日だけを表示します。今日の日付は枠線で示します。</p>
+    <p>日付を押すと、その日の回数と内訳を確認できます。選んだ日への追加は「＋」から行います。日付を押すだけでは記録は増えません。編集や削除もHistoryから行えます。</p>
+    <h3>Settings · 自分のタグに整える</h3>
+    <p>Edit Tagsからタグ名・色・Symbolを変更できます。バックアップ操作や、詳しい使い方・ライセンスの確認もSettingsから行えます。</p>
+    <h3>ホーム画面に追加する</h3>
+    <p>iPhone・iPadではSafariの共有メニューから「ホーム画面に追加」を選ぶと、アプリのように開けます。表示される場合は「Webアプリとして開く」を有効にしてください。</p>
+    <p>完全なオフライン起動には対応していません。ホーム画面から開く場合も、起動時には通信できる状態で利用してください。</p>
+  </section>
+  <section id="data">
+    <h2>保存とバックアップ</h2>
+    <p><strong>記録は利用中のブラウザ内に保存されます。端末間の自動同期はありません。</strong></p>
+    <p>サイトデータの削除、プライベートブラウズの終了、端末の空き容量やブラウザの保存方針などによって、記録が失われることがあります。開発者側からの復元はできないため、定期的にバックアップしてください。</p>
+    <h3>バックアップを書き出す</h3>
+    <ol><li>Settingsで「バックアップを書き出す」を選びます。</li><li>「ファイルに保存」を押します。</li><li>保存先にJSONファイルがあることを確認します。</li></ol>
+    <p>全期間の記録とタグを保存します。バックアップには記録内容が含まれます。公開サイトなどには掲載しないでください。</p>
+    <h3>別の端末や公開URLへ移す</h3>
+    <p>元の環境でバックアップを書き出し、新しい環境のSettingsから読み込みます。別のブラウザや公開URLには自動で移りません。ホーム画面から開いたアプリで記録が見えない場合も、元の環境からバックアップを移してください。</p>
+    <p><strong>読み込みは現在の全記録とタグの置き換えです。追加・結合ではありません。</strong>必要な記録を先に書き出し、確認画面で件数と期間を確かめてください。</p>
+  </section>
+  <section id="privacy">
+    <h2>データとプライバシー</h2>
+    <p>タグと記録はブラウザ内で管理し、記録した内容を開発者のサーバーへ送信する機能はありません。ログイン、クラウド同期、アプリ独自のアクセス解析、広告は組み込んでいません。</p>
+    <p>アプリや表示用ファイル・フォントを取得するため、配信元などの外部サーバーへ接続することがあります。GitHub Pagesでの公開時には、GitHubがセキュリティ目的でIPアドレスを記録します。</p>
+    <p><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">GitHub Pagesのデータ収集について</a></p>
+  </section>
+  <footer><p>Galton Log · 案内更新日 2026年9月19日</p><a class="open" href="./">アプリを開く</a></footer>
+</main>
+</body>
+</html>
